@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url(https://static.vecteezy.com/system/resources/previews/007/118/669/original/abstract-gradient-purple-with-wavy-and-rounded-shape-illustration-free-vector.jpg);
+    font-family: sans-serif;
+    padding: 70px 40px 50px 40px;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+main{
+    width: 400px;
+    height: max-content;
+    min-height: 300px;
+    background-color: plum;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 30px 50px black ;
+    
+}
+
+main form{
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+}
+
+ main form button,
+ main form input{
+    border: none;
+    background-color:transparent;
+    outline: none;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+main form i{
+    opacity: 0.7;
+
+}
+
+main .result{
+    padding: 20px;
+    text-align: center;
+}
+
+main .result .name{
+    font-weight:600;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+main .temparature img{
+    width: 150px;
+    filter: drop-shadow(
+        0 10px 50px black
+    );
+}
+
+main .temparature figcaption{
+    font-size: 3em;
+}
+
+main .description{
+    padding: 10px 0 30px;
+    font-size: larger;
+    color: rgb(65, 5, 5);
+}
+
+main ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+}
+
+main li{
+    background-color: rgb(184, 35, 184);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 30px 10px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    );
+    font-weight: bold;
+    font-size: small;
+}
+
+main li i{
+    font-size: 3em;
+    display: block!important;
+    margin: 20px 0px;
+}
+
+main li:nth-child(1){
+    background-color: rgb(219, 124, 146) ;
+}
+main li:nth-child(2){
+    background-color: rgb(93, 166, 211) ;
+}
+main li:nth-child(3){
+    background-color: rgb(228, 161, 18) ;
+}
+
+main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px)
+    }
+    25%{
+        transform: translate(-5px, 0)
+    }
+    50%{
+        transform: translate(8px, 2px)
+    }
+    75%{
+        transform: translate(-2px, 5px)
+    }
+    100%{
+        transform: translate(0, 0); 
+    }
+}
+    /* Responsive styles */
+
+/* For smaller screens (mobile devices) */
+@media (max-width: 600px) {
+    body {
+        padding: 30px 20px; /* Reduce padding on mobile */
+    }
+
+    main {
+        padding: 20px; /* Adjust padding for mobile */
+        width: 100%;
+    }
+
+    main form {
+        flex-direction: column; /* Stack the form elements */
+        align-items: center;
+    }
+
+    main form input {
+        width: 80%; /* Make input larger on mobile */
+        margin-bottom: 10px;
+    }
+
+    main form button {
+        width: 80%; /* Make button fit the screen */
+    }
+
+    main .result .name {
+        font-size: 1.5em; /* Reduce font size on mobile */
+    }
+
+    main .temparature figcaption {
+        font-size: 2em;
+    }
+
+    main .description {
+        font-size: 1.2em;
+    }
+
+    main ul {
+        grid-template-columns: 1fr; /* Stack the list items vertically */
+    }
+
+    main li {
+        padding: 15px; /* Adjust padding for small screens */
+    }
+
+    main li i {
+        font-size: 2em;
+    }
+
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        padding: 40px 30px;
+    }
+
+    main {
+        padding: 25px;
+        width: 100%;
+    }
+
+    main form {
+        flex-direction: row;
+    }
+
+    main form input {
+        width: 70%; /* Make input slightly smaller on tablets */
+    }
+
+    main .result .name {
+        font-size: 1.8em; /* Adjust font size for tablet */
+    }
+
+    main .temparature figcaption {
+        font-size: 2.5em;
+    }
+
+    main .description {
+        font-size: 1.5em;
+    }
+
+    main ul {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid layout for tablets */
+    }
+
+    main li {
+        padding: 20px; /* Adjust padding */
+    }
+
+    main li i {
+        font-size: 2.5em;
+    }
+}
+}
